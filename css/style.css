@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(243, 136, 29);
+}
+.container {
+    width: 70%;
+}
+.task-contaner{
+    padding-top: 10px;
+
+}
+.delete-task{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+}
+.add-task {
+    padding-left: 10px;
+    margin-left: 10px;
+
+}
+.task{
+    background-color: bisque;
+    padding-bottom: 0px;
+}
+.delete-one {
+    margin-left: 10px;
+}
+.empty {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: bisque;
+    flex: auto;
+    width: 70%;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px ;
+    
+}

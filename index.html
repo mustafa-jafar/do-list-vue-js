@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/fontawesome-free-5.14.0-web/css/fontawesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="do-list">
+        
+        <div class="alert alert-denger"> do list</div>
+    
+        <form action="">
+            <div class="row">
+        <input type="text" name="" id="" class="col-8" placeholder="Write task here" v-model="tasktext" autofocus> 
+        <button class="add-task btn btn-primary  " @click.prevent='addtask' :disabled="!tasktext" >add task</button> 
+        <button class="btn btn-primary  delete-task " v-if="tasks.length > 1 "  @click="deleteall">delete all</button> 
+    </div>
+    </form>
+    
+    <div v-if="tasks.length <= 0 " class="empty"> task list is empty</div>
+    <div class="task-contaner row" v-for ="(task , index) in tasks">
+        <span> {{index+1}} -</span>
+    <div class="task col-8 " > {{task.words}}</div>
+<button class="btn btn-primary  btn-danger delete-one" @click.prevent='deletetask(index)'>delete</button>
+</div>
+    </div>
+</body>
+<script src="./javascript/jquery.min.js"></script>
+<script src="./javascript/popper.min.js"></script>
+<script src="./javascript/bootstrap.min.js"></script>
+<script src="./javascript/fontawesome.min.js"></script>
+<script src="vue.js"></script>
+<script src="vue-script.js"></script>
+</html>
